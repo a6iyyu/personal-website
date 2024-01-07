@@ -1,7 +1,7 @@
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = 'django-insecure-l7v^2#5@9xtew38^k^%5q5gs3tc^ab5%oe+%c+-8=^t%-2l5s0'
+SECRET_KEY = 'django-insecure-9p=e!r&g@^a5z3vw0(%dm^0yk5$v(h^@@dtezs565)@vmm4$&6'
 DEBUG = True
 ALLOWED_HOSTS = []
 
@@ -17,10 +17,10 @@ INSTALLED_APPS = [
 ]
 
 TAILWIND_APP_NAME = 'theme'
-NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
+NPM_BIN_PATH = "npm.cmd"
 
 INTERNAL_IPS = [
-    "127.0.0.1",
+    '127.0.0.1',
 ]
 
 MIDDLEWARE = [
