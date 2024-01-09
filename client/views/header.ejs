@@ -1,9 +1,38 @@
-{% load static tailwind_tags %}
+{% load static tailwind_tags %} {% load static %}
 <div class="navbar h-36 w-full grid place-items-center bg-gray-200">
-  <div class="h-full">
-    <div class="h-full w-1/3 grid place-items-center">
-      <img src="" alt="" />
+  <div class="h-full flex">
+    <div class="h-full w-1/4 flex items-center justify-start">
+      <a href="/" class="h-fit w-fit">
+        <img src="{% static 'img/logo.png' %}" alt="Logo" width="125" />
+      </a>
     </div>
-    <div class="h-full w-2/3 flex items-center justify-center"></div>
+    <div class="h-full w-3/4 flex justify-end">
+      <div class="h-full w-3/4 flex items-center justify-around">
+        <p
+          class="text-1xl cursor-pointer font-semibold hover:underline hover:decoration-gray-950 text-gray-950 hover:text-gray-800"
+          style="transition: all 0.3s ease-in-out"
+        >
+          Home
+        </p>
+        <p
+          class="text-1xl cursor-pointer font-semibold hover:underline hover:decoration-gray-950 text-gray-950 hover:text-gray-800"
+          style="transition: all 0.3s ease-in-out"
+        >
+          About Me
+        </p>
+        <p
+          class="text-1xl cursor-pointer font-semibold hover:underline hover:decoration-gray-950 text-gray-950 hover:text-gray-800"
+          style="transition: all 0.3s ease-in-out"
+        >
+          Contact
+        </p>
+        <p
+          class="text-1xl cursor-pointer font-semibold hover:underline hover:decoration-gray-950 text-gray-950 hover:text-gray-800"
+          style="transition: all 0.3s ease-in-out"
+        >
+          Portfolio
+        </p>
+      </div>
+    </div>
   </div>
 </div>
