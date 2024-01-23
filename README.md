@@ -2,6 +2,6 @@
 
 <p align="justify">
 Lorem ipsum dolor sit amet.
+</p>
 
 For inquiries: mizukinako7@gmail.com
-</p>

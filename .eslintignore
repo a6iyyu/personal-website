@@ -1,0 +1,12 @@
+# Ignoring modules
+node_modules/
+
+# Ignoring files
+*.cjs
+*.js
+*.json
+*.jsx
+*.mjs
+*.ts
+*.tsx
+*.vue

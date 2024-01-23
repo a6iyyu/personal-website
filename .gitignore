@@ -1,5 +1,4 @@
 # Ignoring modules
-__pycache__/
 node_modules/
 /.pnp
 /coverage
@@ -8,6 +7,7 @@ css/
 dist/
 dist-ssr/
 .vscode/
+.astro/
 
 # Ignoring files
 .env
