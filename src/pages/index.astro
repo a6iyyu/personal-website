@@ -1,56 +1,17 @@
 ---
-import "/public/css/component.css";
-import "/public/css/homepage.css";
-import Icon from "/public/img/logo.png?url";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { Header } from "../layouts/Header";
+import { Footer } from "../layouts/Footer";
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Discover the beauty of global art on Virtus, a marketplace and free-source that supports skilled artists from around the world. Buy, enjoy, and support their unique creativity now!"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	  <meta name="generator" content={Astro.generator} />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <title>Welcome!</title>
-    <link rel="icon" href={Icon} />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/css/splide-extension-video.min.css"
-    />
   </head>
   <body>
-    <Header client:only="react" />
-    <Footer client:only="react" />
+    <Header />
+    <Footer />
   </body>
-  <script
-    type="text/javascript"
-    src="/src/static/js/hamburger-menu.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="/src/static/js/homepage.js"
-  ></script>
-  <script crossorigin="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-video@0.8.0/dist/js/splide-extension-video.min.js"
-  ></script>
-  <script
-    type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"
-  ></script>
 </html>

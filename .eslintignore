@@ -9,4 +9,6 @@ node_modules/
 *.mjs
 *.ts
 *.tsx
+*.cts
+*.mts
 *.vue

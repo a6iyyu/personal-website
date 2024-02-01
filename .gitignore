@@ -6,8 +6,6 @@ node_modules/
 css/
 dist/
 dist-ssr/
-.vscode/
-.astro/
 
 # Ignoring files
 .env

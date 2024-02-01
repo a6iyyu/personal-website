@@ -1,28 +1,17 @@
 ---
-import "/public/css/component.css";
-import "/public/css/404.css";
-import Icon from "/public/img/logo.png?url";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { Header } from "../layouts/Header";
+import { Footer } from "../layouts/Footer";
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>404: Not Found!</title>
-    <link rel="icon" href={Icon} />
   </head>
   <body>
-    <Header client:only="react" />
-    <Footer client:only="react" />
+    <Header />
+    <Footer />
   </body>
-  <script
-    type="text/javascript"
-    src="/src/static/js/hamburger-menu.js"
-  ></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </html>

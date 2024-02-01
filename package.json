@@ -1,90 +1,42 @@
 {
-  "name": "virtus",
-  "private": true,
-  "version": "0.0.0",
+  "name": "personal-website",
+  "description": "",
   "type": "module",
+  "version": "0.0.0",
   "scripts": {
     "astro": "astro",
-    "build": "astro build",
+    "build": "astro check && astro build",
+    "format": "prettier write . --plugin=prettier-plugin-astro",
     "dev": "astro dev",
-    "lint": "vue-cli-service lint",
     "preview": "astro preview",
-    "start": "vite",
-    "serve": "vue-cli-service serve"
+    "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/node": "^8.0.0",
+    "@astrojs/check": "^0.4.1",
     "@astrojs/react": "^3.0.9",
     "@astrojs/svelte": "^5.0.3",
     "@astrojs/tailwind": "^5.1.0",
-    "@splidejs/splide": "^4.1.4",
-    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "@splidejs/splide-extension-grid": "^0.4.1",
-    "@splidejs/splide-extension-video": "^0.8.0",
-    "@studio-freight/lenis": "^1.0.34",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "@vitejs/plugin-vue": "^5.0.3",
-    "@vue/cli": "^5.0.8",
-    "accepts": "^1.3.8",
     "aos": "^2.3.4",
-    "array-flatten": "^3.0.0",
-    "astro": "^4.1.3",
-    "auth-astro": "^4.1.0",
-    "auth-core": "^1.0.3",
-    "autoprefixer": "^10.4.16",
-    "axios": "^1.6.2",
-    "core-js": "^3.35.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "esbuild": "^0.19.11",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "framer-motion": "^10.18.0",
-    "path": "^0.12.7",
-    "postcss": "^8.4.32",
+    "astro": "^4.2.8",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.13.0",
     "react": "^18.2.0",
-    "react-devtools": "^5.0.0",
     "react-dom": "^18.2.0",
-    "react-infinite-scroll-component": "^6.1.0",
     "svelte": "^4.2.9",
-    "tailwindcss": "^3.4.1",
-    "url": "^0.11.3",
-    "vue": "^3.4.5"
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@babel/eslint-parser": "^7.23.3",
-    "@types/bcrypt": "^5.0.2",
-    "@types/jsonwebtoken": "^9.0.5",
-    "@types/passport": "^1.0.16",
-    "@vitejs/plugin-react": "^4.2.1",
-    "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
-    "@vue/cli-plugin-router": "^5.0.8",
-    "@vue/cli-service": "^5.0.8",
-    "@vue/compiler-sfc": "^3.4.15",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.20.1",
-    "vite": "^5.0.12"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead",
-    "not ie 11"
-  ]
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "typescript": "^5.3.3"
+  }
 }
