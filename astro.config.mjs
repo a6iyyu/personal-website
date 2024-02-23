@@ -5,4 +5,7 @@ import svelte from "@astrojs/svelte";
 
 export default defineConfig({
   integrations: [react(), tailwind(), svelte()],
+  server: {
+    port: 3000,
+  },
 });

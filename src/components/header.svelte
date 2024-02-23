@@ -1,0 +1,1 @@
+<header class="h-[9.5rem] w-[85%] flex mx-auto"></header>

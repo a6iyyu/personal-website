@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "DM Sans", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.text-1xl {
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+
+@media screen and (max-width: 8192px) {
+  body {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 3120px) {
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #393939;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #787878;
+  }
+  br::selection,
+  img::selection {
+    background: none;
+  }
+  body {
+    display: block;
+    overflow-x: hidden;
+    background-color: #f5f5dc;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1680px) {
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 1160px) {
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  ::-webkit-scrollbar {
+    width: 11px;
+  }
+}
+
+@media screen and (max-width: 864px) {
+}
+
+@media screen and (max-width: 640px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+@media screen and (max-width: 324px) {
+  * {
+    display: none;
+  }
+}
