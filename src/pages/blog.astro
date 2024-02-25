@@ -1,11 +1,11 @@
 ---
 import "../../static/scss/component.scss";
-import "../../static/scss/homepage.scss";
+import "../../static/scss/404.scss";
 import Logo from "/static/img/logo.png?url";
 import ScrollIndicator from "../components/scroll-indicator.svelte";
 import ScrollToTop from "../components/scroll-to-top.svelte";
 import Header from "../components/header.svelte";
-import { Homepage } from "../layouts/homepage";
+import { BlogPage } from "../layouts/blog";
 ---
 
 <html lang="en">
@@ -15,7 +15,7 @@ import { Homepage } from "../layouts/homepage";
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <title>Welcome!</title>
+    <title>About</title>
     <link rel="icon" href={Logo} />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
@@ -23,7 +23,7 @@ import { Homepage } from "../layouts/homepage";
     <ScrollIndicator client:only="svelte" />
     <ScrollToTop client:only="svelte" />
     <Header />
-    <Homepage client:only="react" />
+    <BlogPage client:only="react" />
   </body>
   <script crossorigin="https://cdn.tailwindcss.com"></script>
   <script

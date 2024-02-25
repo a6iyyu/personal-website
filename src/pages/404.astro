@@ -2,10 +2,10 @@
 import "../../static/scss/component.scss";
 import "../../static/scss/404.scss";
 import Logo from "/static/img/logo.png?url";
+import ScrollIndicator from "../components/scroll-indicator.svelte";
+import ScrollToTop from "../components/scroll-to-top.svelte";
 import Header from "../components/header.svelte";
-import { ScrollIndicator } from "../components/scroll-indicator";
-import { ScrollToTop } from "../components/scroll-to-top";
-import { NotFound } from "../layouts/404";
+import { NotFoundPage } from "../layouts/404";
 ---
 
 <html lang="en">
@@ -20,10 +20,10 @@ import { NotFound } from "../layouts/404";
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
-    <ScrollIndicator client:only="react" />
-    <ScrollToTop client:only="react" />
+    <ScrollIndicator client:only="svelte" />
+    <ScrollToTop client:only="svelte" />
     <Header />
-    <NotFound client:only="react" />
+    <NotFoundPage client:only="react" />
   </body>
   <script crossorigin="https://cdn.tailwindcss.com"></script>
   <script

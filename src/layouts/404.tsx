@@ -1,5 +1,5 @@
 import React from "react";
 
-export const NotFound: React.FC = () => {
+export const NotFoundPage: React.FC = () => {
   return null;
 };
