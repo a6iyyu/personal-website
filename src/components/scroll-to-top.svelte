@@ -23,5 +23,10 @@
   class={`h-24 w-24 bg-gray-800 hover:bg-gray-700 cursor-pointer rounded-full fixed grid place-items-center z-30 transition-all duration-300 ease-in-out bottom-8 right-8 ${showScroll ? "visible opacity-100" : "invisible opacity-0"}`}
   on:click={scrollToTop}
 >
-  <img src={scrollToTopImage} class="rotate-180" width="25" alt="" />
+  <img
+    src={scrollToTopImage}
+    class="rotate-180 text-base text-center text-slate-50"
+    width="25"
+    alt="Scroll To Top"
+  />
 </div>

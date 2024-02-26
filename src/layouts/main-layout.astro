@@ -1,0 +1,36 @@
+---
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Logo from "/static/img/logo.png?url";
+import ScrollIndicator from "../components/scroll-indicator.svelte";
+import ScrollToTop from "../components/scroll-to-top.svelte";
+import Header from "../components/header.svelte";
+
+const { description, title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" href={Logo} />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <ScrollIndicator client:only="svelte" />
+    <ScrollToTop client:only="svelte" />
+    <Header />
+    <slot />
+  </body>
+  <script crossorigin="https://cdn.tailwindcss.com"></script>
+  <script
+    type="text/javascript"
+    src="https://unpkg.com/aos@next/dist/aos.js"
+  ></script>
+  <script type="text/javascript">
+    AOS.init();
+  </script>
+</html>

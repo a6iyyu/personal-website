@@ -1,0 +1,71 @@
+@media screen and (max-width: 3120px) {
+  .not-found-page {
+    height: 25rem;
+    margin: 20rem 0;
+  }
+  .not-found-page > div > div:first-child > img {
+    width: 600px;
+  }
+  .back-to-home {
+    height: 4.5rem;
+    width: 14rem;
+  }
+  .back-to-home div:first-child {
+    height: 3rem;
+    width: 3rem;
+  }
+  .back-to-home div:last-child {
+    height: 4rem;
+    width: 9rem;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .not-found-page {
+    margin: 7.5rem 0 10rem 0;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .not-found-page {
+    margin: 5rem 0 7.5rem 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .not-found-page {
+    height: 60rem;
+  }
+  .not-found-page > div > div {
+    width: 100% !important;
+  }
+  .not-found-page > div > div:last-child > div:not(div:first-child) {
+    display: grid;
+    place-items: center;
+  }
+  .not-found-page > div > div:last-child > div:first-child {
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    text-align-last: center;
+  }
+  .not-found-page > div > div:last-child > div:nth-child(2) > p {
+    text-align: justify;
+    text-align-last: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .not-found-page {
+    height: 60rem;
+  }
+  .not-found-page > div > div:first-child > img {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .not-found-page {
+    height: 65rem;
+  }
+}
