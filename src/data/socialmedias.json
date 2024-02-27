@@ -1,0 +1,32 @@
+{
+    "socialmedias": [
+        {
+            "id": 1,
+            "alt": "GitHub",
+            "img": "",
+            "link": "https://github.com/a6iyyu",
+            "width": ""
+        },
+        {
+            "id": 2,
+            "alt": "LinkedIn",
+            "img": "",
+            "link": "https://linkedin.com/in/rafiabiyyuairlangga",
+            "width": ""
+        },
+        {
+            "id": 3,
+            "alt": "Gmail",
+            "img": "",
+            "link": "mailto:mizukinako7@gmail.com",
+            "width": ""
+        },
+        {
+            "id": 4,
+            "alt": "Instagram",
+            "img": "",
+            "link": "https://instagram.com/a6iyyu",
+            "width": ""
+        }
+    ]
+}

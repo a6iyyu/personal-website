@@ -2,7 +2,7 @@
   import Dropdown from "./dropdown.svelte";
 </script>
 
-<header class="h-36 w-[85%] flex justify-between mx-auto">
+<header class="h-36 w-3/4 flex justify-between mx-auto">
   <section class="h-full w-2/5 flex items-center justify-start">
     <a href="/">
       <img

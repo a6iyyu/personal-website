@@ -1,5 +1,5 @@
 <section
-  class="h-[50rem] lg:h-[30rem] w-[85%] flex flex-col-reverse lg:flex-row mx-auto mb-20 mt-8"
+  class="h-[50rem] lg:h-[30rem] w-3/4 flex flex-col-reverse lg:flex-row mx-auto mb-20 mt-8"
 >
   <div
     class="h-3/5 lg:h-full w-full lg:w-[55%] flex flex-col items-start justify-center"
@@ -39,8 +39,7 @@
     <img
       src=""
       alt="Myself"
-      width=""
-      class="cursor-default font-semibold text-xl"
+      class="cursor-default font-semibold rounded-xl text-xl"
       data-aos="fade-left"
     />
   </div>
