@@ -3,6 +3,11 @@
   const dropdown = () => {
     open = !open;
   };
+  window.addEventListener("click", function (event) {
+    if (!event.target.closest(".flex") && open) {
+      open = !open;
+    }
+  });
   const menus = ["About", "Blog", "Project"];
 </script>
 

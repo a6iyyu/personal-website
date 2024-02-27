@@ -11,7 +11,8 @@
                 "✤ Svelte",
                 "✤ TypeScript",
                 "✤ Vue"
-            ]
+            ],
+            "data-aos": "fade-right"
         },
         {
             "id": 2,
@@ -20,7 +21,8 @@
                 "✤ English (USA)",
                 "✤ Indonesian",
                 "✤ Javanese"
-            ]
+            ],
+            "data-aos": "fade-up"
         },
         {
             "id": 3,
@@ -29,7 +31,8 @@
                 "✤ Able to work with a team",
                 "✤ Problem Solving",
                 "✤ Take the lead"
-            ]
+            ],
+            "data-aos": "fade-left"
         }
     ]
 }

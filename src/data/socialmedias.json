@@ -3,30 +3,34 @@
         {
             "id": 1,
             "alt": "GitHub",
-            "img": "",
+            "img": "/static/img/github.png?url",
             "link": "https://github.com/a6iyyu",
-            "width": ""
+            "width": "25",
+            "data-aos": "fade-right"
         },
         {
             "id": 2,
             "alt": "LinkedIn",
-            "img": "",
+            "img": "/static/img/linkedin.png?url",
             "link": "https://linkedin.com/in/rafiabiyyuairlangga",
-            "width": ""
+            "width": "25",
+            "data-aos": "fade-up"
         },
         {
             "id": 3,
             "alt": "Gmail",
-            "img": "",
+            "img": "/static/img/gmail.png?url",
             "link": "mailto:mizukinako7@gmail.com",
-            "width": ""
+            "width": "30",
+            "data-aos": "fade-up"
         },
         {
             "id": 4,
             "alt": "Instagram",
-            "img": "",
+            "img": "/static/img/instagram.png?url",
             "link": "https://instagram.com/a6iyyu",
-            "width": ""
+            "width": "25",
+            "data-aos": "fade-left"
         }
     ]
 }
