@@ -32,7 +32,7 @@
       data-aos="fade-right"
       style="transition: all 0.3s ease-in-out"
     >
-      Learn About Me
+      Understand Me
     </a>
   </div>
   <div class="h-2/5 lg:h-full w-full lg:w-[45%] grid place-items-center">

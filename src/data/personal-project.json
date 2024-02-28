@@ -1,0 +1,16 @@
+{
+    "personalproject": [
+        {
+            "id": 1,
+            "title": "Visit Jatim",
+            "description": "Visit Jatim, your travel guide site during your stay in East Java.",
+            "languages": [
+                "Astro",
+                "React",
+                "SCSS",
+                "TypeScript",
+                "Vue"
+            ]
+        }
+    ]
+}

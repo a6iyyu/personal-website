@@ -5,14 +5,7 @@
             "date": "",
             "title": "",
             "description": "",
-            "skills": ""
-        },
-        {
-            "id": 2,
-            "date": "",
-            "title": "",
-            "description": "",
-            "skills": ""
+            "skills": []
         }
     ]
 }
