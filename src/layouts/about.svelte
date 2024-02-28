@@ -23,15 +23,17 @@
       Hi, folks!&nbsp;&#128075;
       <br />
       <br />
-      I'm <strong>Rafi Abiyyu Airlangga</strong> and you can call me
-      <strong>Rafi</strong>. A student who is studying at
-      <strong>State Polytechnic of Malang</strong> majoring in
-      <em>Information Technology</em> and currently studying to become a
-      <em>Software Engineer</em>. I have high enthusiasm in learning new things
-      and always ready to face challenges. However, I realize that sometimes
+      I'm <strong>Rafi Abiyyu Airlangga</strong>, and you can call me
+      <strong>Rafi</strong>. A student majoring in
+      <em>Information Technology</em> at the
+      <strong>State Polytechnic of Malang</strong>
+      and currently studying to become a
+      <em>Software Engineer</em>. I have a high enthusiasm for learning new
+      things and am always ready to face challenges. However, I realize that
+      sometimes
       <strong>I need an extra push</strong> to get things started. My experience
       in technology is still nonexistent, but every day I do self-taught
-      learning in order to progress. Currently, I'm learning <u>Astro</u>,
+      learning to progress. Currently, I'm learning <u>Astro</u>,
       <u>React</u>,
       <u>Svelte</u>, <u>TypeScript</u>, and
       <u>Vue</u>.

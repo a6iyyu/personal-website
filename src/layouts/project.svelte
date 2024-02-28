@@ -1,7 +1,7 @@
 <script>
   import { experiences } from "../data/work-experience.json";
   import { personalproject } from "../data/personal-project.json";
-  import { volunteers } from "../data/volunteer.json";
+  import { organizationvolunteers } from "../data/organization-volunteer.json";
 </script>
 
 <main class="h-fit w-full mb-28 mt-10 xl:mt-14">
@@ -212,13 +212,13 @@
       class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
       data-aos="fade-up"
     >
-      Volunteer
+      Organization & Volunteer
     </h3>
     <hr
       class="h-0.5 w-full bg-gray-950 border border-dashed"
       data-aos="fade-up"
     />
-    {#each volunteers as volunteer}
+    {#each organizationvolunteers as volunteer}
       {#if !volunteer.title}
         <section
           class="h-fit w-full flex flex-col items-center justify-center mb-12 mt-3"
@@ -240,47 +240,43 @@
         </section>
       {:else if volunteer.title !== null}
         <section
-          class="h-fit w-full flex flex-col items-center justify-center rounded-2xl border-2 border-gray-950 mb-12 mt-9"
+          class="h-fit w-full flex flex-col items-center justify-center cursor-default rounded-2xl border-2 border-gray-950 mb-12 mt-9"
           id={volunteer.id}
           data-aos="fade-up"
         >
           <div
             class="h-1/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex items-center justify-between mx-auto mb-2 mt-6"
           >
-            <a
-              href="/"
+            <div
               class="text-3xl text-gray-950 hover:text-gray-700 font-semibold transition-all duration-300 ease-in-out hover:underline"
             >
               {volunteer.title}
-            </a>
-            <a
-              href="/"
+            </div>
+            <div
               class="text-base text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
             >
               <em>{volunteer.date}</em>
-            </a>
+            </div>
           </div>
           <hr class="h-0.5 w-[90%] bg-gray-950 mx-auto" />
           <div
             class="h-3/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
           >
-            <a
-              href="/"
+            <div
               class="text-base text-justify text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
             >
               {volunteer.description}
-            </a>
+            </div>
           </div>
           <div
             class="h-1/5 max-w-[80%] w-4/5 xl:max-w-[90%] xl:w-[90%] flex mb-5 mt-2"
           >
             {#each volunteer.skills as skills}
-              <a
-                href="/"
+              <div
                 class="border border-slate-950 hover:bg-slate-950 text-slate-900 hover:text-slate-100 hover:font-semibold rounded-full mr-4 py-3 px-8 font-medium text-base transition-all duration-300 ease-in-out"
               >
                 {skills}
-              </a>
+              </div>
             {/each}
           </div>
         </section>
