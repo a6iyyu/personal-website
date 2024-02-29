@@ -1,9 +1,9 @@
 ---
 import "bootstrap-icons/font/bootstrap-icons.css";
+import "../../static/scss/component.scss";
 import Logo from "/static/img/logo.png?url";
 import ScrollIndicator from "../components/scroll-indicator.svelte";
 import ScrollToTop from "../components/scroll-to-top.svelte";
-import Header from "../components/header.svelte";
 
 const { description, title } = Astro.props;
 ---
@@ -22,7 +22,6 @@ const { description, title } = Astro.props;
   <body>
     <ScrollIndicator client:only="svelte" />
     <ScrollToTop client:only="svelte" />
-    <Header client:only="svelte" />
     <slot />
   </body>
   <script crossorigin="https://cdn.tailwindcss.com"></script>

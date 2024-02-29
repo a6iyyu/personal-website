@@ -1,46 +1,77 @@
-<section
-  class="h-[50rem] lg:h-[30rem] w-3/4 flex flex-col-reverse lg:flex-row mx-auto mb-20 mt-8"
->
-  <div
-    class="h-3/5 lg:h-full w-full lg:w-[55%] flex flex-col items-start justify-center"
-  >
+<script lang="ts">
+  import HeaderIndex from "../components/header-index.svelte";
+  import Skills from "../components/skills.svelte";
+  import WorkExperience from "../components/work-experience.svelte";
+  import PersonalProject from "../components/personal-project.svelte";
+  import OrganizationVolunteer from "../components/organization-volunteer.svelte";
+  import SocialMedia from "../components/social-media.svelte";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const ScrollIntoView = (trigger: Element, target: Element) => {
+      trigger.addEventListener("click", function () {
+        target.scrollIntoView({ behavior: "smooth" });
+      });
+    };
+
+    const AboutButton =
+      null || (document.getElementById("about-button") as Element);
+    const AboutSection =
+      null || (document.getElementById("about-section") as Element);
+    ScrollIntoView(AboutButton, AboutSection);
+  });
+</script>
+
+<HeaderIndex />
+<main class="h-fit w-full flex flex-col my-28">
+  <!-- Describe Myself -->
+  <div class="h-8 w-full" id="about-section"></div>
+  <section class="h-fit w-3/4 mx-auto">
     <h3
-      class="text-3xl text-gray-950 cursor-default font-medium mx-auto lg:m-0"
+      class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"
       data-aos="fade-right"
     >
-      Hello everyone!&nbsp;&#128075;
+      About Me
     </h3>
-    <br />
-    <h2
-      class="text-4xl text-gray-950 cursor-default font-black mx-auto lg:m-0 text-center"
+    <hr
+      class="h-0.5 w-full bg-gray-950 border border-dashed"
       data-aos="fade-right"
-    >
-      I'm Rafi Abiyyu Airlangga
-    </h2>
-    <br />
-    <h4
-      class="text-2xl text-gray-950 cursor-default font-normal text-justify [text-align-last:center] lg:[text-align-last:left] lg:m-0 tracking-wide"
-      data-aos="fade-right"
-    >
-      A college student who is studying to <br class="hidden lg:flex" />
-      become a software engineer one day.
-    </h4>
-    <br />
-    <a
-      href="/about"
-      class="h-fit w-fit mx-auto lg:m-0 bg-slate-950 hover:bg-slate-700 text-slate-50 font-semibold text-lg rounded-lg px-10 py-5"
-      data-aos="fade-right"
-      style="transition: all 0.3s ease-in-out"
-    >
-      Understand Me
-    </a>
-  </div>
-  <div class="h-2/5 lg:h-full w-full lg:w-[45%] grid place-items-center">
-    <img
-      src=""
-      alt="Myself"
-      class="cursor-default font-semibold rounded-xl text-xl"
-      data-aos="fade-left"
     />
-  </div>
-</section>
+    <h5
+      class="text-lg text-gray-900 cursor-default font-medium leading-relaxed text-justify tracking-wide mt-6"
+      data-aos="fade-right"
+    >
+      Hi, folks!&nbsp;&#128075;
+      <br />
+      <br />
+      I'm <strong>Rafi Abiyyu Airlangga</strong>, and you can call me
+      <strong>Rafi</strong>. A student majoring in
+      <em>Information Technology</em> at the
+      <strong>State Polytechnic of Malang</strong>
+      and currently studying to become a
+      <em>Software Engineer</em>. I have a high enthusiasm for learning new
+      things and am always ready to face challenges. However, I realize that
+      sometimes
+      <strong>I need an extra push</strong> to get things started. My experience
+      in technology is still nonexistent, but every day I do self-taught
+      learning to progress. Currently, I'm learning <u>Astro</u>,
+      <u>React</u>,
+      <u>Svelte</u>, <u>TypeScript</u>, and
+      <u>Vue</u>.
+    </h5>
+  </section>
+
+  <!-- Skills -->
+  <Skills />
+
+  <!-- Work Experience -->
+  <WorkExperience />
+
+  <!-- Personal Project -->
+  <PersonalProject />
+
+  <!-- Organization & Volunteer -->
+  <OrganizationVolunteer />
+
+  <!-- My Social Medias -->
+  <SocialMedia />
+</main>
