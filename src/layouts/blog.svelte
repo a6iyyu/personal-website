@@ -1,5 +1,7 @@
 <script>
   import { blogs } from "../data/blog.json";
+
+  const menus = ["Opinion", "Education", "Entertainment"];
 </script>
 
 <main class="h-fit w-full mb-28 mt-10 xl:mt-14">

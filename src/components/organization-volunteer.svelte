@@ -40,38 +40,43 @@
         data-aos="fade-up"
       >
         <div
-          class="h-1/5 w-3/4 xl:max-w-[90%] xl:w-[90%] flex items-center justify-between mx-auto mb-2 mt-6"
+          class="h-1/5 w-4/5 xl:max-w-[90%] xl:w-[90%] block xl:flex xl:items-center xl:justify-between mx-auto mb-2 mt-6"
         >
-          <div
+          <a
+            href="/"
             class="text-3xl text-gray-950 hover:text-gray-700 font-semibold transition-all duration-300 ease-in-out hover:underline"
           >
             {volunteer.title}
-          </div>
-          <div
+          </a>
+          <a
+            href="/"
             class="text-base text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
           >
             <em>{volunteer.date}</em>
-          </div>
+          </a>
         </div>
-        <hr class="h-0.5 w-[90%] bg-gray-950 mx-auto" />
+        <hr class="h-0.5 w-4/5 xl:w-[90%] bg-gray-950 mx-auto" />
         <div
-          class="h-3/5 w-3/4 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
+          class="h-3/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
         >
-          <div
+          <a
+            href="/"
             class="text-base text-justify text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
           >
             {volunteer.description}
-          </div>
+          </a>
         </div>
         <div
-          class="h-1/5 max-w-[80%] w-3/4 xl:max-w-[90%] xl:w-[90%] flex mb-5 mt-2"
+          class="h-1/5 max-w-[80%] w-4/5 xl:max-w-[90%] xl:w-[90%] flex overflow-x-auto mb-5 mt-2"
         >
           {#each volunteer.skills as skills}
-            <div
-              class="border border-slate-950 hover:bg-slate-950 text-slate-900 hover:text-slate-100 hover:font-semibold rounded-full mr-4 py-3 px-8 font-medium text-base transition-all duration-300 ease-in-out"
+            <a
+              href="/"
+              class="border border-slate-950 hover:bg-slate-950 text-slate-900 hover:text-slate-100 hover:font-semibold rounded-full mr-4 mb-3 py-3 px-8 font-medium text-base transition-all duration-300 ease-in-out"
+              id="volunteer-skills"
             >
               {skills}
-            </div>
+            </a>
           {/each}
         </div>
       </section>

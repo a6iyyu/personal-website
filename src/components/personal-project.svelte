@@ -40,7 +40,7 @@
         data-aos="fade-up"
       >
         <div
-          class="h-1/5 w-3/4 xl:max-w-[90%] xl:w-[90%] flex items-center justify-between mx-auto mb-2 mt-6"
+          class="h-1/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex items-center justify-between mx-auto mb-2 mt-6"
         >
           <a
             href="/"
@@ -54,9 +54,9 @@
           >
           </a>
         </div>
-        <hr class="h-0.5 w-3/4 xl:w-[90%] bg-gray-950 mx-auto" />
+        <hr class="h-0.5 w-4/5 xl:w-[90%] bg-gray-950 mx-auto" />
         <div
-          class="h-3/5 w-3/4 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
+          class="h-3/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
         >
           <a
             href="/"
@@ -66,7 +66,7 @@
           </a>
         </div>
         <div
-          class="h-1/5 max-w-[80%] w-3/4 xl:max-w-[90%] xl:w-[90%] flex overflow-x-auto mb-5 mt-2"
+          class="h-1/5 max-w-[80%] w-4/5 xl:max-w-[90%] xl:w-[90%] flex overflow-x-auto mb-5 mt-2"
         >
           {#each personalproject.languages as languages}
             <a

@@ -10,7 +10,7 @@
   });
   const menus = [
     { menu: "About", id: "about-button" },
-    { menu: "Blog", id: "blog-button" },
+    { menu: "Blog", link: "/blog" },
     { menu: "Project", id: "project-button" },
   ];
 </script>
@@ -29,12 +29,13 @@
       data-aos={`${dropdown ? "fade-down" : "fade-up"}`}
     >
       {#each menus as menu}
-        <div
+        <a
+          href={menu.link}
           class="block text-md text-center cursor-pointer font-semibold px-12 py-5 rounded-lg hover:bg-slate-200 transition-all duration-300 ease-in-out"
           id={menu.id}
         >
           {menu.menu}
-        </div>
+        </a>
       {/each}
     </div>
   {/if}

@@ -1,28 +1,14 @@
-<script lang="ts">
+<script>
   import HeaderIndex from "../components/header-index.svelte";
   import Skills from "../components/skills.svelte";
   import WorkExperience from "../components/work-experience.svelte";
   import PersonalProject from "../components/personal-project.svelte";
   import OrganizationVolunteer from "../components/organization-volunteer.svelte";
   import SocialMedia from "../components/social-media.svelte";
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const ScrollIntoView = (trigger: Element, target: Element) => {
-      trigger.addEventListener("click", function () {
-        target.scrollIntoView({ behavior: "smooth" });
-      });
-    };
-
-    const AboutButton =
-      null || (document.getElementById("about-button") as Element);
-    const AboutSection =
-      null || (document.getElementById("about-section") as Element);
-    ScrollIntoView(AboutButton, AboutSection);
-  });
 </script>
 
 <HeaderIndex />
-<main class="h-fit w-full flex flex-col my-28">
+<main class="h-fit w-full flex flex-col mb-20 mt-8">
   <!-- Describe Myself -->
   <div class="h-8 w-full" id="about-section"></div>
   <section class="h-fit w-3/4 mx-auto">

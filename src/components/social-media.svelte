@@ -28,6 +28,7 @@
           src={socialmedia.img}
           alt={socialmedia.alt}
           width={socialmedia.width}
+          class="mix-blend-multiply"
         />
         &nbsp;&nbsp;
         <h5 class="font-semibold">{socialmedia.alt}</h5>
