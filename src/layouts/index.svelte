@@ -1,5 +1,5 @@
 <script>
-  import HeaderIndex from "../components/header-index.svelte";
+  import Header from "../components/header.svelte";
   import Skills from "../components/skills.svelte";
   import WorkExperience from "../components/work-experience.svelte";
   import PersonalProject from "../components/personal-project.svelte";
@@ -7,11 +7,25 @@
   import SocialMedia from "../components/social-media.svelte";
 </script>
 
-<HeaderIndex />
-<main class="h-fit w-full flex flex-col mb-20 mt-8">
+<Header />
+<main class="h-fit w-full flex flex-col mb-20">
+  <section
+    class="h-fit w-full flex justify-end bg-center bg-cover bg-no-repeat"
+    style="background-image: url(../../desk.jpg)"
+  >
+    <div
+      class="h-[35rem] w-full xl:w-1/2 flex items-center flex-col xl:items-start justify-center mb-10"
+    >
+      <h2 class="text-5xl text-gray-50 cursor-default font-semibold">Hello</h2>
+      <h2 class="text-4xl text-gray-50 cursor-default font-semibold">
+        I'm Rafi
+      </h2>
+    </div>
+  </section>
+
   <!-- Describe Myself -->
   <div class="h-8 w-full" id="about-section"></div>
-  <section class="h-fit w-3/4 mb-4 mx-auto">
+  <section class="h-fit w-3/4 mt-4 mb-8 mx-auto">
     <h3
       class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"
       data-aos="fade-right"

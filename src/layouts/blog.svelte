@@ -1,11 +1,17 @@
 <script>
+  import Header from "../components/header.svelte";
   import { blogs } from "../data/blog.json";
 
   const menus = ["Opinion", "Education", "Entertainment"];
 </script>
 
-<main class="h-fit w-full mb-28 mt-10 xl:mt-14">
-  <section class="h-fit w-3/4 mt-4 mx-auto">
+<Header />
+<main class="h-fit w-full mb-28">
+  <div
+    class="h-[35rem] w-full mb-16 bg-center bg-cover bg-no-repeat"
+    style="background-image: url(../../writer.jpg);"
+  ></div>
+  <section class="h-fit w-4/5 mx-auto">
     <h3
       class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
       data-aos="fade-up"
