@@ -3,7 +3,7 @@
         {
             "id": 1,
             "alt": "GitHub",
-            "img": "/static/img/github.png?url",
+            "img": "../../github.png",
             "link": "https://github.com/a6iyyu",
             "width": "25",
             "data-aos": "fade-right"
@@ -11,7 +11,7 @@
         {
             "id": 2,
             "alt": "LinkedIn",
-            "img": "/static/img/linkedin.png?url",
+            "img": "../../linkedin.png",
             "link": "https://linkedin.com/in/rafiabiyyuairlangga",
             "width": "25",
             "data-aos": "fade-up"
@@ -19,7 +19,7 @@
         {
             "id": 3,
             "alt": "Gmail",
-            "img": "/static/img/gmail.png?url",
+            "img": "../../gmail.png",
             "link": "mailto:mizukinako7@gmail.com",
             "width": "30",
             "data-aos": "fade-up"
@@ -27,7 +27,7 @@
         {
             "id": 4,
             "alt": "Instagram",
-            "img": "/static/img/instagram.png?url",
+            "img": "../../instagram.png",
             "link": "https://instagram.com/a6iyyu",
             "width": "25",
             "data-aos": "fade-left"

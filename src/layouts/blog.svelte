@@ -13,16 +13,28 @@
       Blog
     </h3>
     <hr
-      class="h-0.5 w-full bg-gray-950 border border-dashed"
+      class="h-0.5 w-full bg-slate-950 border border-dashed"
       data-aos="fade-up"
     />
+    <section
+      class="max-h-full h-fit w-full flex overflow-x-auto"
+      data-aos="fade-up"
+    >
+      {#each menus as menu}
+        <div
+          class="h-fit w-fit bg-slate-950 hover:bg-slate-800 text-slate-50 font-semibold mr-4 mt-4 px-9 py-5 rounded-full cursor-pointer transition-all duration-300 ease-in-out"
+        >
+          {menu}
+        </div>
+      {/each}
+    </section>
     {#each blogs as blog}
       {#if !blog.title}
         <section
           class="h-fit w-full flex flex-col items-center justify-center mb-12 mt-10"
         >
           <img
-            src="/static/img/dont-know.jpg?url"
+            src="../../dont-know.jpg"
             width={400}
             class="text-gray-950 font-semibold mix-blend-multiply"
             alt="Hmm..."
@@ -75,7 +87,7 @@
           class="h-fit w-full flex flex-col items-center justify-center mb-12 mt-3"
         >
           <img
-            src="/static/img/error-fetching.png?url"
+            src="../../error-fetching.png"
             width={300}
             class="text-gray-950 font-semibold"
             alt="Something went wrong."

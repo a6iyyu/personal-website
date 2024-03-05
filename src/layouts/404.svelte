@@ -2,7 +2,7 @@
   <div class="h-full w-[90%] block lg:flex">
     <div class="h-[45%] lg:h-full w-1/2 grid place-items-center">
       <img
-        src="/static/img/404.png?url"
+        src="../../404.png"
         alt="404: Not Found!"
         data-aos="fade-up"
       />

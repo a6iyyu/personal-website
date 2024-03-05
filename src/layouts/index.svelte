@@ -11,7 +11,7 @@
 <main class="h-fit w-full flex flex-col mb-20 mt-8">
   <!-- Describe Myself -->
   <div class="h-8 w-full" id="about-section"></div>
-  <section class="h-fit w-3/4 mx-auto">
+  <section class="h-fit w-3/4 mb-4 mx-auto">
     <h3
       class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"
       data-aos="fade-right"
@@ -44,6 +44,17 @@
       <u>Svelte</u>, <u>TypeScript</u>, and
       <u>Vue</u>.
     </h5>
+    <br />
+    <br />
+    <a
+      href="/src/data/resume-cv.pdf?url"
+      data-aos="fade-right"
+      class="h-fit w-full md:w-fit bg-slate-950 hover:bg-slate-800 text-slate-50 font-semibold px-9 py-6 rounded-xl mx-auto md:mx-0"
+      style="transition: all 0.3s ease-in-out"
+      download
+    >
+      DOWNLOAD RESUME
+    </a>
   </section>
 
   <!-- Skills -->

@@ -1,5 +1,5 @@
 ---
-import "../../static/scss/404.scss";
+import "../styles/404.scss";
 import MainLayout from "../layouts/main-layout.astro";
 import BlogPage from "../layouts/blog.svelte";
 ---
@@ -7,3 +7,13 @@ import BlogPage from "../layouts/blog.svelte";
 <MainLayout description="" title="Blog">
   <BlogPage client:only="svelte" />
 </MainLayout>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide(".splide__1", {
+    drag: "free",
+    perPage: 2,
+    snap: true,
+    type: "loop",
+  }).mount();
+});
+</script>

@@ -4,12 +4,12 @@
 
 <header
   class="h-fit w-full flex flex-col bg-center bg-cover bg-no-repeat"
-  style="background-image: url(/static/img/desk.jpg?url)"
+  style="background-image: url(../../desk.jpg)"
 >
   <section class="h-36 w-4/5 flex items-center justify-between mx-auto">
     <div class="h-full w-2/5 flex items-center justify-start">
       <a href="/" class="h-fit w-fit">
-        <img src="/static/img/logo.png?url" alt="Logo" width={90} />
+        <img src="../../logo.png" alt="Logo" width={90} />
       </a>
     </div>
     <navbar
