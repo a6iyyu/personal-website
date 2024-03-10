@@ -6,6 +6,7 @@ node_modules/
 css/
 dist/
 dist-ssr/
+.vercel/
 
 # Ignoring files
 .env

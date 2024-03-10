@@ -10,7 +10,7 @@
     {
       id: "blog-menu",
       menu: "Blog",
-      link: "/blog"
+      link: "/blog",
     },
     {
       id: "project-menu",
@@ -36,13 +36,20 @@
 
 <header
   class="h-fit w-full flex flex-col fixed z-50 {scrolling
-    ? 'h-32 bg-slate-300 shadow-lg transition-all ease-in-out duration-50'
+    ? 'h-28 bg-slate-300 shadow-lg transition-all ease-in-out duration-50'
     : 'bg-transparent transition-all ease-in-out duration-50'}"
 >
-  <section class="h-36 w-4/5 flex items-center justify-between mx-auto">
+  <section class="h-36 w-3/4 flex items-center justify-between mx-auto">
     <div class="h-full w-2/5 flex items-center justify-start">
       <a href="/" class="h-fit w-fit">
-        <img src="../../logo.png" alt="Logo" width={90} />
+        <img
+          src="../../logo.png"
+          alt="Logo"
+          width={scrolling ? "70" : "90"}
+          class={scrolling
+            ? " transition-all duration-300 ease-in-out"
+            : "transition-all duration-300 ease-in-out"}
+        />
       </a>
     </div>
     <navbar

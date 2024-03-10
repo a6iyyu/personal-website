@@ -1,7 +1,6 @@
 ---
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/component.scss";
-import Logo from "../../logo.png?url";
 import ScrollIndicator from "../components/scroll-indicator.svelte";
 import ScrollToTop from "../components/scroll-to-top.svelte";
 
@@ -16,7 +15,7 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" href={Logo} />
+    <link rel="icon" href="../../logo.png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"

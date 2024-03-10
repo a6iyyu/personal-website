@@ -8,7 +8,7 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   integrations: [tailwind(), svelte(), mdx(), partytown()],
   server: {
-    port: 3000,
+    port: 3333,
   },
   output: "server",
   adapter: vercel(),

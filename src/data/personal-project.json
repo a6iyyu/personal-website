@@ -11,6 +11,16 @@
                 "TypeScript",
                 "Vue"
             ]
+        },
+        {
+            "id": 2,
+            "title": "Personal Website",
+            "description": "Personal website used to record work experience, projects undertaken . . .",
+            "languages": [
+                "Astro",
+                "SCSS",
+                "Svelte"
+            ]
         }
     ]
 }

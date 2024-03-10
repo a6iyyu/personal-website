@@ -11,7 +11,7 @@
     class="h-[35rem] w-full mb-16 bg-center bg-cover bg-no-repeat"
     style="background-image: url(../../writer.jpg);"
   ></div>
-  <section class="h-fit w-4/5 mx-auto">
+  <section class="h-fit w-3/4 mx-auto">
     <h3
       class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
       data-aos="fade-up"
