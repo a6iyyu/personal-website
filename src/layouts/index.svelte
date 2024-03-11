@@ -1,5 +1,6 @@
 <script>
   import Header from "../components/header.svelte";
+  import TypingEffect from "../components/typing-effect.svelte";
   import Skills from "../components/skills.svelte";
   import WorkExperience from "../components/work-experience.svelte";
   import PersonalProject from "../components/personal-project.svelte";
@@ -16,10 +17,12 @@
     <div
       class="h-[35rem] w-full xl:w-1/2 flex items-center flex-col xl:items-start justify-center mb-10"
     >
-      <h2 class="text-5xl text-gray-50 cursor-default font-semibold">Hello</h2>
-      <h2 class="text-4xl text-gray-50 cursor-default font-semibold">
-        I'm Rafi
+      <h2
+        class="text-5xl text-gray-50 cursor-default font-semibold leading-relaxed"
+      >
+        Hello, I'm Rafi
       </h2>
+      <TypingEffect />
     </div>
   </section>
 
