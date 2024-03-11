@@ -39,7 +39,7 @@
     ? 'h-28 bg-slate-300 shadow-lg transition-all ease-in-out duration-50'
     : 'bg-transparent transition-all ease-in-out duration-50'}"
 >
-  <section class="h-36 w-3/4 flex items-center justify-between mx-auto">
+  <section class="h-32 w-3/4 flex items-center justify-between mx-auto">
     <div class="h-full w-2/5 flex items-center justify-start">
       <a href="/" class="h-fit w-fit">
         <img
@@ -47,7 +47,7 @@
           alt="Logo"
           width={scrolling ? "70" : "90"}
           class={scrolling
-            ? " transition-all duration-300 ease-in-out"
+            ? "transition-all duration-300 ease-in-out"
             : "transition-all duration-300 ease-in-out"}
         />
       </a>

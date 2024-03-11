@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  const text = ["Front-end Developer", "Informatics Student", "Looking For A Job"];
+  const text = ["Opinion", "Education", "Entertainment"];
   let currentIndex = text[0];
   let i = 0;
   let backspace = false;
@@ -31,7 +31,7 @@
 </script>
 
 <h4
-  class="text-3xl text-gray-50 cursor-default font-semibold"
+  class="text-2xl lg:text-3xl text-gray-50 cursor-default font-semibold"
   data-aos="fade-up"
 >
   {currentIndex.slice(0, i)}<span>|</span>

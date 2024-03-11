@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Header from "../components/header.svelte";
   import TypingEffect from "../components/typing-effect.svelte";
   import Skills from "../components/skills.svelte";
@@ -19,6 +19,7 @@
     >
       <h2
         class="text-5xl text-gray-50 cursor-default font-semibold leading-relaxed"
+        data-aos="fade-up"
       >
         Hello, I'm Rafi
       </h2>

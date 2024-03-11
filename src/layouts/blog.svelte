@@ -1,5 +1,6 @@
 <script>
   import Header from "../components/header.svelte";
+  import TypingEffect from "../pages/blog/typing-effect.svelte";
   import { blogs } from "../data/blog.json";
 
   const menus = ["Opinion", "Education", "Entertainment"];
@@ -8,9 +9,22 @@
 <Header />
 <main class="h-fit w-full mb-28">
   <div
-    class="h-[35rem] w-full mb-16 bg-center bg-cover bg-no-repeat"
-    style="background-image: url(../../writer.jpg);"
-  ></div>
+    class="h-[40rem] lg:h-[35rem] w-full mb-16 bg-center bg-cover bg-no-repeat"
+    style="background-image: url(../../writer.jpg)"
+  >
+    <div
+      class="h-full w-3/4 flex items-start flex-col xl:items-start justify-center mb-10 mx-auto"
+    >
+      <h2
+        class="text-4xl lg:text-5xl text-gray-50 cursor-default font-semibold"
+        data-aos="fade-up"
+      >
+        Let's Write Something!
+      </h2>
+      <br />
+      <TypingEffect />
+    </div>
+  </div>
   <section class="h-fit w-3/4 mx-auto">
     <h3
       class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
