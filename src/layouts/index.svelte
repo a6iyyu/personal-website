@@ -1,11 +1,52 @@
-<script lang="ts">
+<script>
+  import { onMount } from "svelte";
   import Header from "../components/header.svelte";
-  import TypingEffect from "../components/typing-effect.svelte";
   import Skills from "../components/skills.svelte";
   import WorkExperience from "../components/work-experience.svelte";
   import PersonalProject from "../components/personal-project.svelte";
   import OrganizationVolunteer from "../components/organization-volunteer.svelte";
   import SocialMedia from "../components/social-media.svelte";
+
+  const text = [
+    "Front-end Developer",
+    "Informatics Student",
+    "Looking For A Job",
+  ];
+  let currentIndex = text[0];
+  let i = 0;
+  let backspace = false;
+  const typing = () => {
+    if (backspace) {
+      if (i > 0) {
+        setTimeout(() => {
+          i--;
+        }, 0);
+      } else {
+        backspace = false;
+        currentIndex =
+          text[
+            currentIndex === text[0]
+              ? 1
+              : [
+                  currentIndex === text[1]
+                    ? 2
+                    : [currentIndex === text[2] ? 0 : 0],
+                ]
+          ];
+      }
+    } else {
+      if (i < currentIndex.length) {
+        setTimeout(() => {
+          i++;
+        }, 500);
+      } else {
+        backspace = true;
+      }
+    }
+  };
+  onMount(() => {
+    setInterval(typing, 100);
+  });
 </script>
 
 <Header />
@@ -23,13 +64,18 @@
       >
         Hello, I'm Rafi
       </h2>
-      <TypingEffect />
+      <h4
+        class="text-3xl text-gray-50 cursor-default font-semibold"
+        data-aos="fade-up"
+      >
+        {currentIndex.slice(0, i)}<span>|</span>
+      </h4>
     </div>
   </section>
 
   <!-- Describe Myself -->
-  <div class="h-8 w-full" id="about-section"></div>
-  <section class="h-fit w-3/4 mt-4 mb-8 mx-auto">
+  <div class="h-20 w-full" id="about-section"></div>
+  <section class="h-fit w-3/4 mb-8 mx-auto">
     <h3
       class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"
       data-aos="fade-right"
