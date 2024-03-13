@@ -15,6 +15,7 @@
     {
       id: "project-menu",
       menu: "Project",
+      link: "/project",
     },
   ];
 

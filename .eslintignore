@@ -1,15 +1,1 @@
-# Ignoring modules
-node_modules/
-
-# Ignoring files
-*.cts
-*.cjs
-*.js
-*.json
-*.jsx
-*.mjs
-*.mts
-*.svelte
-*.ts
-*.tsx
-*.vue
+/src/
