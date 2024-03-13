@@ -1,6 +1,24 @@
 ---
+import { type CollectionEntry, getCollection } from "astro:content";
 import "../../styles/slug.scss";
 import MainLayout from "../../layouts/main-layout.astro";
+
+export async function getStaticPaths() {
+  const BlogEntries = await getCollection("blog");
+  return BlogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { slug: entry.slug.toUpperCase().replace(/-/g, " ") },
+  }));
+}
+
+type Props = {
+  entry: CollectionEntry<"blog">;
+};
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 ---
 
-<MainLayout />
+<MainLayout frontmatter={entry.data} slug={entry.slug}>
+  <Content />
+</MainLayout>

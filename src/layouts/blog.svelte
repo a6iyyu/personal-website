@@ -15,16 +15,7 @@
         }, 0);
       } else {
         backspace = false;
-        currentIndex =
-          text[
-            currentIndex === text[0]
-              ? 1
-              : [
-                  currentIndex === text[1]
-                    ? 2
-                    : [currentIndex === text[2] ? 0 : 0],
-                ]
-          ];
+        currentIndex = text[currentIndex === text[0] ? 1 : [currentIndex === text[1] ? 2 : [currentIndex === text[2] ? 0 : 0]]];
       }
     } else {
       if (i < currentIndex.length) {
@@ -43,20 +34,20 @@
 
 <Header />
 <main class="h-fit w-full mb-28">
-  <div
-    class="h-[40rem] lg:h-[35rem] w-full mb-16 bg-center bg-cover bg-no-repeat"
+  <section
+    class="h-[40rem] lg:h-[35rem] w-full grid place-items-center mb-16 bg-center bg-cover bg-no-repeat"
     style="background-image: url(../../writer.jpg)"
   >
     <div
-      class="h-full w-3/4 flex items-start flex-col xl:items-start justify-center mb-10 mx-auto"
+      class="h-3/5 w-3/4 flex items-start flex-col xl:items-start justify-center xl:justify-end mb-10 mx-auto"
     >
       <h2
         class="text-4xl lg:text-5xl text-gray-50 cursor-default font-semibold"
+        style="line-height: 1.375"
         data-aos="fade-up"
       >
-        Let's Write Something!
+        Let's Make Some Words!
       </h2>
-      <br />
       <h4
         class="text-2xl lg:text-3xl text-gray-50 cursor-default font-semibold"
         data-aos="fade-up"
@@ -64,7 +55,7 @@
         {currentIndex.slice(0, i)}<span>|</span>
       </h4>
     </div>
-  </div>
+  </section>
   <section class="h-fit w-3/4 mx-auto">
     <h3
       class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
@@ -109,6 +100,7 @@
           </h4>
         </section>
       {:else if blog.title !== null}
+        <!-- Blog -->
         <section
           class="h-fit w-full flex flex-col items-center justify-center rounded-2xl border-2 border-gray-950 mb-12 mt-9"
           id={blog.id}

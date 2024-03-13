@@ -2,9 +2,6 @@
   import { onMount } from "svelte";
   import Header from "../components/header.svelte";
   import Skills from "../components/skills.svelte";
-  import WorkExperience from "../components/work-experience.svelte";
-  import PersonalProject from "../components/personal-project.svelte";
-  import OrganizationVolunteer from "../components/organization-volunteer.svelte";
   import SocialMedia from "../components/social-media.svelte";
 
   const text = [
@@ -23,16 +20,7 @@
         }, 0);
       } else {
         backspace = false;
-        currentIndex =
-          text[
-            currentIndex === text[0]
-              ? 1
-              : [
-                  currentIndex === text[1]
-                    ? 2
-                    : [currentIndex === text[2] ? 0 : 0],
-                ]
-          ];
+        currentIndex = text[currentIndex === text[0] ? 1 : [currentIndex === text[1] ? 2 : [currentIndex === text[2] ? 0 : 0]]];
       }
     } else {
       if (i < currentIndex.length) {
@@ -123,15 +111,6 @@
 
   <!-- Skills -->
   <Skills />
-
-  <!-- Work Experience -->
-  <WorkExperience />
-
-  <!-- Personal Project -->
-  <PersonalProject />
-
-  <!-- Organization & Volunteer -->
-  <OrganizationVolunteer />
 
   <!-- My Social Medias -->
   <SocialMedia />

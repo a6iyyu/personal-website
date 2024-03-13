@@ -1,0 +1,10 @@
+---
+import "../styles/component.scss";
+import "../styles/project.scss";
+import MainLayout from "../layouts/main-layout.astro";
+import ProjectPage from "../layouts/project.svelte";
+---
+
+<MainLayout description="" title="Project">
+  <ProjectPage client:only="svelte" />
+</MainLayout>

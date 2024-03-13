@@ -1,5 +1,5 @@
 <script>
-  import { personalproject } from "../data/personal-project.json";
+  import { project } from "../data/project.json";
 </script>
 
 <section class="h-fit w-3/4 mt-12 mx-auto">
@@ -7,14 +7,14 @@
     class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
     data-aos="fade-up"
   >
-    Personal Project
+    Project
   </h3>
   <hr
     class="h-0.5 w-full bg-gray-950 border border-dashed"
     data-aos="fade-up"
   />
-  {#each personalproject as personalproject}
-    {#if !personalproject.title}
+  {#each project as project}
+    {#if !project.title}
       <section
         class="h-fit w-full flex flex-col items-center justify-center mb-12 mt-3"
       >
@@ -33,23 +33,23 @@
           Oops, I don't have any project yet . . .
         </h4>
       </section>
-    {:else if personalproject.title !== null}
+    {:else if project.title !== null}
       <section
         class="h-fit w-full flex flex-col items-center justify-center rounded-2xl border-2 border-gray-950 mb-12 mt-9"
-        id={personalproject.id}
+        id={project.id}
         data-aos="fade-up"
       >
         <div
           class="h-1/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex items-center justify-between mx-auto mb-2 mt-6"
         >
           <a
-            href="/{personalproject.title.toLowerCase().replace(/\s+/g, '-')}"
+            href="/{project.title.toLowerCase().replace(/\s+/g, '-')}"
             class="text-3xl text-gray-950 hover:text-gray-700 font-semibold transition-all duration-300 ease-in-out hover:underline"
           >
-            {personalproject.title}
+            {project.title}
           </a>
           <a
-            href="/{personalproject.title.toLowerCase().replace(/\s+/g, '-')}"
+            href="/{project.title.toLowerCase().replace(/\s+/g, '-')}"
             class="text-base text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
           >
           </a>
@@ -59,18 +59,18 @@
           class="h-3/5 w-4/5 xl:max-w-[90%] xl:w-[90%] flex flex-col items-start justify-between mx-auto my-5"
         >
           <a
-            href="/{personalproject.title.toLowerCase().replace(/\s+/g, '-')}"
+            href="/{project.title.toLowerCase().replace(/\s+/g, '-')}"
             class="text-base text-justify text-gray-900 hover:text-gray-700 font-medium transition-all duration-300 ease-in-out hover:underline"
           >
-            {personalproject.description}
+            {project.description}
           </a>
         </div>
         <div
           class="h-1/5 max-w-[80%] w-4/5 xl:max-w-[90%] xl:w-[90%] flex overflow-x-auto mb-5 mt-2"
         >
-          {#each personalproject.languages as languages}
+          {#each project.languages as languages}
             <a
-              href="/{personalproject.title.toLowerCase().replace(/\s+/g, '-')}"
+              href="/{project.title.toLowerCase().replace(/\s+/g, '-')}"
               class="border border-slate-950 hover:bg-slate-950 text-slate-900 hover:text-slate-100 hover:font-semibold rounded-full mr-4 mb-3 py-3 px-8 font-medium text-base transition-all duration-300 ease-in-out"
             >
               {languages}
