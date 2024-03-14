@@ -1,11 +1,64 @@
+<script>
+  import { onDestroy, onMount } from "svelte";
+  import Dropdown from "../components/dropdown.svelte";
+
+  const menus = [
+    {
+      id: "about-menu",
+      menu: "About",
+    },
+    {
+      id: "blog-menu",
+      menu: "Blog",
+      link: "/blog",
+    },
+    {
+      id: "project-menu",
+      menu: "Project",
+      link: "/project",
+    },
+  ];
+
+  onMount(() => {
+    window.addEventListener("scroll", HandleScroll);
+    document.getElementById("about-menu").addEventListener("click", () => {
+      document.getElementById("about-section").scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+  onDestroy(() => {
+    window.addEventListener("scroll", HandleScroll);
+  });
+</script>
+
+<header class="h-fit w-full flex flex-col z-50">
+  <section class="h-32 md:h-40 w-3/4 flex items-center justify-between mx-auto">
+    <div class="h-full w-2/5 flex items-center justify-start">
+      <a href="/" class="h-fit w-fit">
+        <img src="../../logo.png" alt="Logo" width={90} />
+      </a>
+    </div>
+    <navbar
+      class="h-full w-2/5 hidden xl:flex xl:items-center xl:justify-around"
+    >
+      {#each menus as menu}
+        <a
+          href={menu.link}
+          class="text-lg hover:underline cursor-pointer font-semibold text-slate-950 hover:text-slate-800 transition-all duration-300 ease-in-out"
+          id={menu.id}
+        >
+          {menu.menu}
+        </a>
+      {/each}
+    </navbar>
+    <Dropdown />
+  </section>
+</header>
 <section class="not-found-page h-[40rem] w-full grid place-items-center">
   <div class="h-full w-[90%] block lg:flex">
     <div class="h-[45%] lg:h-full w-1/2 grid place-items-center">
-      <img
-        src="../../404.png"
-        alt="404: Not Found!"
-        data-aos="fade-up"
-      />
+      <img src="../../404.png" alt="404: Not Found!" data-aos="fade-up" />
     </div>
     <div
       class="h-[55%] lg:h-full w-1/2 flex flex-col items-center justify-center"

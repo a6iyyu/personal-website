@@ -62,7 +62,7 @@
   </section>
 
   <!-- Describe Myself -->
-  <div class="h-20 w-full" id="about-section"></div>
+  <div class="h-16 w-full" id="about-section"></div>
   <section class="h-fit w-3/4 mb-8 mx-auto">
     <h3
       class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"

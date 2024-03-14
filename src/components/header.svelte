@@ -29,6 +29,11 @@
   };
   onMount(() => {
     window.addEventListener("scroll", HandleScroll);
+    document.getElementById("about-menu").addEventListener("click", () => {
+      document.getElementById("about-section").scrollIntoView({
+        behavior: "smooth",
+      });
+    });
   });
   onDestroy(() => {
     window.addEventListener("scroll", HandleScroll);
