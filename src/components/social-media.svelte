@@ -2,7 +2,7 @@
   import { socialmedias } from "../data/social-media.json";
 </script>
 
-<section class="h-fit w-3/4 mt-4 mx-auto">
+<section class="h-fit w-3/4 mt-8 mx-auto">
   <h3
     class="text-3xl text-gray-950 text-center xl:text-left cursor-default font-semibold mb-3"
     data-aos="fade-up"

@@ -4,17 +4,15 @@
 
   const menus = [
     {
-      id: "about-menu",
-      menu: "About",
+      name: "Home",
+      link: "/",
     },
     {
-      id: "blog-menu",
-      menu: "Blog",
+      name: "Blog",
       link: "/blog",
     },
     {
-      id: "project-menu",
-      menu: "Project",
+      name: "Project",
       link: "/project",
     },
   ];
@@ -29,11 +27,6 @@
   };
   onMount(() => {
     window.addEventListener("scroll", HandleScroll);
-    document.getElementById("about-menu").addEventListener("click", () => {
-      document.getElementById("about-section").scrollIntoView({
-        behavior: "smooth",
-      });
-    });
   });
   onDestroy(() => {
     window.addEventListener("scroll", HandleScroll);
@@ -47,16 +40,12 @@
 >
   <section class="h-32 w-3/4 flex items-center justify-between mx-auto">
     <div class="h-full w-2/5 flex items-center justify-start">
-      <a href="/" class="h-fit w-fit">
-        <img
-          src="../../logo.png"
-          alt="Logo"
-          width={scrolling ? "70" : "90"}
-          class={scrolling
-            ? "transition-all duration-300 ease-in-out"
-            : "transition-all duration-300 ease-in-out"}
-        />
-      </a>
+      <img
+        src="../../logo.png"
+        alt="Logo"
+        width={scrolling ? "70" : "90"}
+        class="transition-all duration-300 ease-in-out"
+      />
     </div>
     <navbar
       class="h-full w-2/5 hidden xl:flex xl:items-center xl:justify-around"
@@ -67,9 +56,8 @@
           class="text-lg hover:underline cursor-pointer font-semibold {scrolling
             ? 'text-slate-900'
             : 'text-slate-50 hover:text-slate-200'} transition-all duration-300 ease-in-out"
-          id={menu.id}
         >
-          {menu.menu}
+          {menu.name}
         </a>
       {/each}
     </navbar>

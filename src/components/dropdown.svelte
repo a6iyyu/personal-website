@@ -9,9 +9,18 @@
     }
   });
   const menus = [
-    { menu: "About", id: "about-button" },
-    { menu: "Blog", link: "/blog" },
-    { menu: "Project", id: "project-button" },
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Blog",
+      link: "/blog",
+    },
+    {
+      name: "Project",
+      link: "/project",
+    },
   ];
 </script>
 
@@ -32,9 +41,8 @@
         <a
           href={menu.link}
           class="block text-md text-center cursor-pointer font-semibold px-12 py-5 rounded-lg hover:bg-slate-200 transition-all duration-300 ease-in-out"
-          id={menu.id}
         >
-          {menu.menu}
+          {menu.name}
         </a>
       {/each}
     </div>

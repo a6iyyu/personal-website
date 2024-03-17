@@ -62,8 +62,7 @@
   </section>
 
   <!-- Describe Myself -->
-  <div class="h-16 w-full" id="about-section"></div>
-  <section class="h-fit w-3/4 mb-8 mx-auto">
+  <section class="h-fit w-3/4 mb-8 mt-16 mx-auto">
     <h3
       class="text-3xl text-gray-950 cursor-default font-semibold mb-3 text-center xl:text-left"
       data-aos="fade-right"
@@ -102,7 +101,7 @@
       href="/src/data/resume-cv.pdf?url"
       data-aos="fade-right"
       class="h-fit w-full md:w-fit bg-slate-950 hover:bg-slate-800 text-slate-50 font-semibold px-9 py-6 rounded-xl mx-auto md:mx-0"
-      style="transition: all 0.3s ease-in-out"
+      style="box-shadow: 0.5rem 0.5rem 1.5rem #242424; transition: all 0.3s ease-in-out"
       download
     >
       DOWNLOAD RESUME

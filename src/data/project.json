@@ -8,7 +8,7 @@
                 "Astro",
                 "React",
                 "SCSS",
-                "TypeScript",
+                "Tailwind",
                 "Vue"
             ]
         },
@@ -19,7 +19,18 @@
             "languages": [
                 "Astro",
                 "SCSS",
-                "Svelte"
+                "Svelte",
+                "Tailwind"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Kemori",
+            "description": "Kemori, best media downloader tool for everything.",
+            "languages": [
+                "Remix",
+                "Tailwind",
+                "TypeScript"
             ]
         }
     ]

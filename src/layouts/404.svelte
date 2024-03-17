@@ -4,28 +4,21 @@
 
   const menus = [
     {
-      id: "about-menu",
-      menu: "About",
+      name: "Home",
+      link: "/",
     },
     {
-      id: "blog-menu",
-      menu: "Blog",
+      name: "Blog",
       link: "/blog",
     },
     {
-      id: "project-menu",
-      menu: "Project",
+      name: "Project",
       link: "/project",
     },
   ];
 
   onMount(() => {
     window.addEventListener("scroll", HandleScroll);
-    document.getElementById("about-menu").addEventListener("click", () => {
-      document.getElementById("about-section").scrollIntoView({
-        behavior: "smooth",
-      });
-    });
   });
   onDestroy(() => {
     window.addEventListener("scroll", HandleScroll);
@@ -46,9 +39,8 @@
         <a
           href={menu.link}
           class="text-lg hover:underline cursor-pointer font-semibold text-slate-950 hover:text-slate-800 transition-all duration-300 ease-in-out"
-          id={menu.id}
         >
-          {menu.menu}
+          {menu.name}
         </a>
       {/each}
     </navbar>

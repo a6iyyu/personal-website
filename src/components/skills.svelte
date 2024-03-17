@@ -20,6 +20,7 @@
       <div
         class="h-fit xl:max-h-96 xl:h-96 w-full xl:w-[30%] rounded-xl mb-10 pb-7 bg-gradient-to-tl from-slate-800 via-slate-900 to-slate-950"
         id={skill.id}
+        style="box-shadow: 1rem 1rem 2.5rem #242424"
         data-aos={skill["data-aos"]}
       >
         <h4
