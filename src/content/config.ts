@@ -22,7 +22,7 @@ const ProjectCollections = defineCollection({
     description: z.string().max(300, { message: "Title must be 300 characters or less!" }),
     startdate: z.date(),
     enddate: z.date(),
-    producer: z.string().optional(),
+    producer: z.array(z.string()),
     image: z.object({
         src: z.string(),
         alt: z.string(),
