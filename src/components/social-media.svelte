@@ -20,16 +20,11 @@
       <a
         id={socialmedia.id}
         href={socialmedia.link}
-        class="h-1/5 xl:h-4/5 w-full xl:w-[22.5%] flex items-center justify-center border-[1px] mt-6 xl:mt-0.5 border-slate-900 hover:bg-slate-900 text-slate-900 hover:text-slate-100 rounded-xl"
+        class="h-1/5 xl:h-4/5 w-full xl:w-[22.5%] flex items-center justify-center border-[1px] mt-6 xl:mt-0.5 bg-slate-950 hover:bg-slate-800 text-slate-50 rounded-xl"
         style="transition: all 0.3s ease-in-out"
         data-aos={socialmedia["data-aos"]}
       >
-        <img
-          src={socialmedia.img}
-          alt={socialmedia.alt}
-          width={socialmedia.width}
-          class="mix-blend-multiply"
-        />
+        <img src={socialmedia.img} alt={socialmedia.alt} width={20} />
         &nbsp;&nbsp;
         <h5 class="font-semibold">{socialmedia.alt}</h5>
       </a>
