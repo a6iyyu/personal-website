@@ -1,0 +1,33 @@
+# Ignoring modules
+node_modules/
+/.pnp
+/coverage
+/build
+dist/
+dist-ssr/
+.content-collections/
+migrations/
+.nuxt/
+
+# Ignoring files
+.env
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.local
+*.log
+.pnp.js
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
