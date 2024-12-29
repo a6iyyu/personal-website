@@ -12,6 +12,8 @@
     "@astrojs/mdx": "^4.0.3",
     "@astrojs/tailwind": "^5.1.4",
     "astro": "^5.1.1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.17"
   }
 }

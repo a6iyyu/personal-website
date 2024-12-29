@@ -1,61 +1,76 @@
 ---
+import "@/styles/site.css";
+
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-py-2.5">
   <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="/rafi-abiyyu-airlangga.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index" />
     <meta name="description" content={description} />
-    <meta name="og:title" content={title} />
+    <meta name="og:title" content={`${title} - Rafi Abiyyu Airlangga`} />
     <meta name="og:description" content={description} />
     <meta name="og:image" content="" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={`${title} - Rafi Abiyyu Airlangga`} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="" />
-    <title>{title}</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="twitter:image" content="/rafi-abiyyu-airlangga.jpeg" />
+    <title>{title} - Rafi Abiyyu Airlangga</title>
+    <link rel="icon" href="/rafi-abiyyu-airlangga.jpeg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
-    <style>
-      @media screen and (max-width: 8192px) {
-        * {
-          opacity: 0;
-        }
-      }
-      @media screen and (max-width: 3120px) {
-        * {
-          box-sizing: border-box;
-          font-family: "Plus Jakarta Sans", Times, sans-serif, serif;
-          margin: 0;
-          opacity: 1;
-          padding: 0;
-        }
-        ::-webkit-scrollbar {
-          display: none !important;
-        }
-        input:-webkit-autofill,
-        input:-webkit-autofill:hover,
-        input:-webkit-autofill:focus,
-        input:-webkit-autofill:active {
-          transition: background-color 5000s ease-in-out 0s;
-          -webkit-text-fill-color: #fff !important;
-        }
-      }
-      @media screen and (max-width: 324px) {
-        * {
-          display: none;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="mx-auto overflow-x-hidden min-h-screen w-4/5 max-w-[1440px] bg-gradient-to-tl from-[#f9f8f3] to-[#e5e5e5] lg:w-3/5">
+    <header class="mx-auto py-6 flex items-center justify-between font-bold">
+      <a href="/" class="text-2xl">a6iyyu</a>
+      <button
+        onclick="window.open('/cv.pdf', '_blank')"
+        class="flex bg-slate-800 text-slate-50 items-center gap-4 px-6 py-3.5 rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-700"
+      >
+        <i class="fa-solid fa-download" />
+        <h4>Unduh CV</h4>
+      </button>
+    </header>
     <slot />
+    <footer class="mb-6 mt-20 mx-auto cursor-default text-center font-bold">
+      <h6>Rafi Abiyyu</h6>
+      <span class="flex items-center mt-4 gap-6 justify-center text-slate-900">
+        <a href="/blog" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+          Blog
+        </a>
+        <a href="/contact" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+          Contact
+        </a>
+      </span>
+      <span class="mx-auto w-fit grid grid-cols-4 gap-6 mt-6 text-2xl">
+        <a
+          href="https://www.linkedin.com/in/rafiabiyyuairlangga/"
+          target="_blank"
+          class="fa-brands fa-linkedin transition-all duration-300 ease-in-out hover:text-slate-500"
+        />
+        <a
+          href="https://github.com/a6iyyu"
+          target="_blank"
+          class="fa-brands fa-github transition-all duration-300 ease-in-out hover:text-slate-500"
+        />
+        <a
+          href="https://www.instagram.com/a6iyyu/"
+          target="_blank"
+          class="fa-brands fa-instagram transition-all duration-300 ease-in-out hover:text-slate-500"
+        />
+        <a
+          href="mailto:mizukinako7@gmail.com"
+          target="_blank"
+          class="fa fa-envelope transition-all duration-300 ease-in-out hover:text-slate-500"
+        />
+      </span>
+    </footer>
   </body>
 </html>

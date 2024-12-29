@@ -1,5 +1,10 @@
 ---
+import Main from "@/layouts/main.astro";
 import { components, Content } from "@/content/views/index.mdx";
 ---
 
-<Content components={components} />
+<Main title="Beranda" description="">
+  <section class="mx-auto mt-20 text-justify">
+    <Content components={components} />
+  </section>
+</Main>

@@ -1,5 +1,10 @@
 ---
+import Main from "@/layouts/main.astro";
 import { components, Content } from "@/content/views/404.mdx";
 ---
 
-<Content components={components} />
+<Main title="404" description="">
+  <section class="mx-auto mt-20 w-3/5">
+    <Content components={components} />
+  </section>
+</Main>
