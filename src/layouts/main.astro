@@ -1,11 +1,12 @@
 ---
-import "@/styles/site.css";
-
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-py-2.5">
+<html
+  lang="en"
+  class="scroll-py-2.5 max-[8192px]:opacity-0 max-[3120px]:opacity-100 max-[3120px]:m-0 max-[3120px]:p-0 max-[3120px]:box-border max-[3120px]:[font-family:'Plus_Jakarta_Sans',Times,sans-serif,serif] max-[324px]:hidden"
+>
   <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta charset="UTF-8" />
@@ -26,6 +27,14 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com" />
+    <style is:global>
+      @media screen and (max-width: 3120px) {
+        ::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body class="mx-auto overflow-x-hidden min-h-screen w-4/5 max-w-[1440px] bg-gradient-to-tl from-[#f9f8f3] to-[#e5e5e5] lg:w-3/5">
     <header class="mx-auto py-6 flex items-center justify-between font-bold">
@@ -40,13 +49,16 @@ const { title, description } = Astro.props;
     </header>
     <slot />
     <footer class="mb-6 mt-20 mx-auto cursor-default text-center font-bold">
-      <h6>Rafi Abiyyu</h6>
+      <h6>Rafi Abiyyu Airlangga</h6>
       <span class="flex items-center mt-4 gap-6 justify-center text-slate-900">
         <a href="/blog" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
           Blog
         </a>
         <a href="/contact" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
           Contact
+        </a>
+        <a href="/other-stuff" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+          Other Stuff
         </a>
       </span>
       <span class="mx-auto w-fit grid grid-cols-4 gap-6 mt-6 text-2xl">
