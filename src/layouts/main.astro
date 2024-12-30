@@ -1,10 +1,34 @@
 ---
 const { title, description } = Astro.props;
+
+const navigation = {
+  en: {
+    home: "/en",
+    blog: "/en/blog",
+    contact: "/en/contact",
+    other_stuff: "/en/other-stuff",
+    language: "EN",
+  },
+  id: {
+    home: "/id",
+    blog: "/id/blog",
+    contact: "/id/kontak",
+    other_stuff: "/id/lainnya",
+    language: "ID",
+  },
+};
+
+const social_media = [
+  { href: "https://www.linkedin.com/in/rafiabiyyuairlangga/", icon: "fa-brands fa-linkedin" },
+  { href: "https://github.com/a6iyyu", icon: "fa-brands fa-github" },
+  { href: "https://www.instagram.com/a6iyyu/", icon: "fa-brands fa-instagram" },
+  { href: "mailto:mizukinako7@gmail.com", icon: "fa fa-envelope" },
+];
 ---
 
 <!doctype html>
 <html
-  lang="en"
+  lang=`${Astro.url.pathname === "/id" ? "id" : "en"}`
   class="scroll-py-2.5 max-[8192px]:opacity-0 max-[3120px]:opacity-100 max-[3120px]:m-0 max-[3120px]:p-0 max-[3120px]:box-border max-[3120px]:[font-family:'Plus_Jakarta_Sans',Times,sans-serif,serif] max-[324px]:hidden"
 >
   <head>
@@ -14,12 +38,12 @@ const { title, description } = Astro.props;
     <meta property="og:image" content="/rafi-abiyyu-airlangga.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index" />
-    <meta name="description" content={description} />
+    <meta name="description" content={`${description}`} />
     <meta name="og:title" content={`${title} - Rafi Abiyyu Airlangga`} />
-    <meta name="og:description" content={description} />
+    <meta name="og:description" content={`${description}`} />
     <meta name="og:image" content="" />
     <meta name="twitter:title" content={`${title} - Rafi Abiyyu Airlangga`} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={`${description}`} />
     <meta name="twitter:image" content="/rafi-abiyyu-airlangga.jpeg" />
     <title>{title} - Rafi Abiyyu Airlangga</title>
     <link rel="icon" href="/rafi-abiyyu-airlangga.jpeg" type="image/x-icon" />
@@ -27,7 +51,6 @@ const { title, description } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com" />
     <style is:global>
       @media screen and (max-width: 3120px) {
         ::-webkit-scrollbar {
@@ -38,50 +61,64 @@ const { title, description } = Astro.props;
   </head>
   <body class="mx-auto overflow-x-hidden min-h-screen w-4/5 max-w-[1440px] bg-gradient-to-tl from-[#f9f8f3] to-[#e5e5e5] lg:w-3/5">
     <header class="mx-auto py-6 flex items-center justify-between font-bold">
-      <a href="/" class="text-2xl">a6iyyu</a>
-      <button
-        onclick="window.open('/cv.pdf', '_blank')"
-        class="flex bg-slate-800 text-slate-50 items-center gap-4 px-6 py-3.5 rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-700"
-      >
-        <i class="fa-solid fa-download" />
-        <h4>Unduh CV</h4>
-      </button>
+      {Astro.url.pathname === "/id" ? (
+        <>
+          <a href={navigation.en.home} class="text-sm md:text-2xl">a6iyyu</a>
+          <a
+            href={navigation.en.home}
+            class="flex bg-slate-800 text-slate-50 text-xs items-center gap-4 px-6 py-3.5 rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-700 md:text-base"
+          >
+            <img src="/indonesia.svg" />
+            <h4>{navigation.id.language}</h4>
+          </a>
+        </>
+      ) : (
+        <>
+          <a href={navigation.id.home} class="text-sm md:text-2xl">a6iyyu</a>
+          <a
+            href={navigation.id.home}
+            class="flex bg-slate-800 text-slate-50 text-xs items-center gap-4 px-6 py-3.5 rounded-lg transition-all duration-300 ease-in-out hover:bg-slate-700 md:text-base"
+          >
+            <img src="/english.svg" />
+            <h4>{navigation.en.language}</h4>
+          </a>
+        </>
+      )}
     </header>
     <slot />
     <footer class="mb-6 mt-20 mx-auto cursor-default text-center font-bold">
       <h6>Rafi Abiyyu Airlangga</h6>
       <span class="flex items-center mt-4 gap-6 justify-center text-slate-900">
-        <a href="/blog" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
-          Blog
-        </a>
-        <a href="/contact" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
-          Contact
-        </a>
-        <a href="/other-stuff" class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
-          Other Stuff
-        </a>
+        {Astro.url.pathname === "/id" ? (
+          <>
+            <a href={`${navigation.id.blog}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Blog
+            </a>
+            <a href={`${navigation.id.contact}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Kontak
+            </a>
+            <a href={`${navigation.id.other_stuff}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Lainnya
+            </a>
+          </>
+        ) : (
+          <>
+            <a href={`${navigation.en.blog}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Blog
+            </a>
+            <a href={`${navigation.en.contact}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Contact
+            </a>
+            <a href={`${navigation.en.other_stuff}`} class="hover:text-slate-500 hover:underline transition-all duration-300 ease-in-out">
+              Other Stuff
+            </a>
+          </>
+        )}
       </span>
       <span class="mx-auto w-fit grid grid-cols-4 gap-6 mt-6 text-2xl">
-        <a
-          href="https://www.linkedin.com/in/rafiabiyyuairlangga/"
-          target="_blank"
-          class="fa-brands fa-linkedin transition-all duration-300 ease-in-out hover:text-slate-500"
-        />
-        <a
-          href="https://github.com/a6iyyu"
-          target="_blank"
-          class="fa-brands fa-github transition-all duration-300 ease-in-out hover:text-slate-500"
-        />
-        <a
-          href="https://www.instagram.com/a6iyyu/"
-          target="_blank"
-          class="fa-brands fa-instagram transition-all duration-300 ease-in-out hover:text-slate-500"
-        />
-        <a
-          href="mailto:mizukinako7@gmail.com"
-          target="_blank"
-          class="fa fa-envelope transition-all duration-300 ease-in-out hover:text-slate-500"
-        />
+        {social_media.map(({ href, icon }) => (
+          <a href={href} target="_blank" class={`${icon} hover:text-slate-500`} />
+        ))}
       </span>
     </footer>
   </body>

@@ -7,5 +7,7 @@ export default defineConfig({
   integrations: [tailwind(), mdx()],
   server: {
     port: 7000,
+    open: true,
   },
+  site: "https://a6iyyu.vercel.app",
 });
