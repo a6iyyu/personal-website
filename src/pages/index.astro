@@ -1,3 +1,10 @@
 ---
-return Astro.redirect('/id');
+import Main from "@/layouts/main.astro";
+import { Content } from "@/content/views/index.mdx";
 ---
+
+<Main title="Home" description="">
+  <section class="mx-auto mt-20 text-justify">
+    <Content />
+  </section>
+</Main>
