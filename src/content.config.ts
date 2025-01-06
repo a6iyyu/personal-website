@@ -12,4 +12,11 @@ export const collections = {
       thumbnail: z.string().trim(),
     }),
   }),
+  views: defineCollection({
+    type: "content",
+    schema: z.object({
+      title: z.string().trim().optional(),
+      description: z.string().trim().optional(),
+    }),
+  }),
 };
