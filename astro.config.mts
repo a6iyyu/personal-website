@@ -1,13 +1,11 @@
-// @ts-check
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
-import mdx from "@astrojs/mdx";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  integrations: [tailwind(), mdx()],
   server: {
-    port: 7000,
-    open: true,
+    port: 3500,
   },
-  site: "https://a6iyyu.vercel.app",
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

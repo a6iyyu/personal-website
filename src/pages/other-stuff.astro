@@ -1,10 +1,10 @@
 ---
 import Main from "@/layouts/main.astro";
-import { Content } from "@/content/views/other-stuff.mdx";
+import Introduction from "@/components/others/introduction.astro";
+import FavoriteSongs from "@/components/others/favorite-songs.astro";
 ---
 
 <Main title="Other Stuff" description="">
-  <section class="mx-auto mt-20 text-justify">
-    <Content />
-  </section>
+  <Introduction />
+  <FavoriteSongs />
 </Main>

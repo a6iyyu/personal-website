@@ -1,10 +1,18 @@
 ---
 import Main from "@/layouts/main.astro";
-import { Content } from "@/content/views/index.mdx";
+import Introduction from "@/components/home/introduction.astro";
+import Education from "@/components/home/education.astro";
+import Experience from "@/components/home/experience.astro";
+import Awards from "@/components/home/awards.astro";
+import Volunteer from "@/components/home/volunteer.astro";
+import Documentation from "@/components/home/documentation.astro";
 ---
 
-<Main title="Home" description="">
-  <section class="mx-auto mt-20 text-justify">
-    <Content />
-  </section>
+<Main title="Home" description="Hi, welcome to my website. This is where I share all the things I do.">
+  <Introduction />
+  <Education />
+  <Experience />
+  <Awards />
+  <Volunteer />
+  <Documentation />
 </Main>

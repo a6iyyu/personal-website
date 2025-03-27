@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("articles").then(posts => posts.sort((a, b) => a.data.date > b.data.date ? -1 : 1));
+---
+
+<section class="mt-10">
+  {posts.map((post) => (
+    <article class="border-b border-slate-900 py-10 first:border-t">
+      <a href={`/articles/${post.slug}`} class="text-2xl font-bold">
+        {post.data.title}
+      </a>
+      <div class="mt-2 flex cursor-default items-center gap-8">
+        <h5 class="flex items-center gap-2 text-sm text-gray-500">
+          <i class="fa-solid fa-calendar" />{" "}
+          {new Date(post.data.date).toLocaleDateString("id-ID", { month: "2-digit", day: "numeric", year: "numeric" })}
+        </h5>
+        <h5 class="flex items-center gap-2 text-sm text-gray-500">
+          <i class="fa-solid fa-clock" /> {post.data.reading_time} mins
+        </h5>
+      </div>
+      <h4 class="my-2 cursor-default">{post.data.description}</h4>
+      <a href={`/articles/${post.slug}`} class="flex items-center gap-1 text-blue-500 transition-all duration-300 ease-in-out visited:text-purple-600 lg:hover:text-blue-700">
+        Read more <sup class="fa fa-external-link" />
+      </a>
+    </article>
+  ))}
+</section>
