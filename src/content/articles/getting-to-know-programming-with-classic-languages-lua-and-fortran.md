@@ -9,7 +9,6 @@ thumbnail: ""
 
 # Getting to Know Programming with Classic Languages: Lua and Fortran
 
-
 Programming languages have been around for decades, and some of them are still widely used today. In this article, we'll explore two classic programming languages, i.e. Lua and Fortran. We'll dive into their history, how they work, and why they are still relevant in modern applications.
 
 ## Introduction
@@ -26,7 +25,6 @@ Fortran is known for its speed and efficiency, making it ideal for handling comp
 
 Over the decades, Fortran has continued to evolve with new versions like Fortran 77, Fortran 90, and Fortran 2008, adding modern features like object-oriented programming and parallel computing. Even after more than 60 years, Fortran remains a top choice for scientists and engineers because of its ability to handle heavy computational tasks quickly and efficiently.
 
-
 ## Install Lua
 
 The Lua programming language is rarely mentioned among many programmers today, and its official documentation can feel outdated. Installing Lua on your device requires patience and attention to detail to ensure it runs smoothly. Therefore, the following section will guide you through the steps to download and install Lua on Windows.
@@ -38,7 +36,6 @@ The Lua programming language is rarely mentioned among many programmers today, a
 - Open the Start Menu and search for **Edit the system environment variables**. In the User Variables section, click New.
 - Enter a variable name (**e.g., Lua**) and set the path to the Lua folder (**e.g., C:/lua**). Click OK to save the changes.
 - Then, open the Command Prompt and type **lua** to check if the installation was successful.
-
 
 ## Writing Syntax and How To Run the First Program In Lua
 
@@ -63,17 +60,19 @@ And just like that — TADA! Your first Lua program is up and running!
 
 Even if you’re just getting to know Lua through the classic “Hello World” program, you might already notice how its syntax feels a lot like natural language. Lua’s simplicity makes it a scripting language, meaning it uses dynamic typing. While this flexibility is great, it often comes with a trade-off — Lua can be slower, much like Python.
 
-
 Let’s take a closer look at the pros and cons of Lua.
 
 **Pros**
+
 - **Simple and Clean Syntax —** With only about 22 basic keywords, learning Lua feels straightforward and beginner-friendly.
 - **Highly Flexible —** Lua doesn’t lock you into strict rules, so you can shape it to fit different project needs.
 - **Dynamic Typing** — You don’t need to specify the type of variables, Lua figures it out while the program runs.
 
 **Cons**
+
 - **Small Community —** It has a very small community of users, still relatively unknown next to Perl and Python languages.
 - **Minimal Built-in Libraries —** Lua’s standard library is small, meaning you may need to write more code or rely on external libraries for advanced features. For example:
+
 ```txt
 // example.txt
 Hello, World!
@@ -93,12 +92,14 @@ end
 ```
 
 The code above shows how Lua requires several manual steps to open and read files. And the result will be:
+
 ```bash
 >> lua readfile.lua
 Hello, World!
 ```
 
 - **Lack of Native Multithreading —** Lua doesn’t support true multithreading out of the box, which can limit performance for more complex or parallel tasks. For example:
+
 ```lua
 for i = 1, 5 do
   print("Task " ..i.. " started.")
@@ -145,6 +146,7 @@ Once again, we turn to the classic “Hello World” program. To me, writing For
 In this guide, we’ll write your first Fortran program using the 2008 version and walk through how to run it. Let’s dive into the world of Fortran!
 
 First, create a new file named **hello-world.f08** and prepare to explore the Fortran environment.
+
 ```f08
 program hello_world
   implicit none
@@ -171,11 +173,13 @@ While Lua has a syntax that is more similar to human language, Fortran is more c
 Let’s take a closer look at the pros and cons of Fortran.
 
 **Pros**
+
 - **Better performance —** Fortran is designed to tightly optimize code, making it difficult to write slow code.
 - **Suitable for scientific computing —** Fortran supports multidimensional arrays and number structures naturally, facilitating scientific calculations.
 - **Excellent compatibility —** Fortran ensures the code remains compatible with previous versions, allowing the code to last a long time without major changes.
 
 **Cons**
+
 - **String Management Issues —** Fortran has limited string management capabilities, including a less effective string concatenation function. For example:
 
 ```f08
