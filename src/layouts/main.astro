@@ -2,7 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import "@/styles/global.css";
 
-const { title, description } = Astro.props;
+const { title, description } = Astro.props as { title: string; description: string };
 const social_media = [
   { href: "https://www.linkedin.com/in/rafiabiyyuairlangga/", icon: "fa-brands fa-linkedin" },
   { href: "https://github.com/a6iyyu", icon: "fa-brands fa-github" },
@@ -11,7 +11,6 @@ const social_media = [
 ];
 ---
 
-<!doctype html>
 <html lang="en" class="scroll-py-2.5 max-[8192px]:opacity-0 max-[3120px]:m-0 max-[3120px]:box-border max-[3120px]:p-0 max-[3120px]:[font-family:'Plus_Jakarta_Sans',Times,sans-serif,serif] max-[3120px]:opacity-100 max-[324px]:hidden">
   <head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
@@ -27,6 +26,7 @@ const social_media = [
     <meta name="twitter:title" content={`${title} - Rafi Abiyyu Airlangga`} />
     <meta name="twitter:description" content={`${description}`} />
     <meta name="twitter:image" content="/rafi-abiyyu-airlangga.jpeg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title} - Rafi Abiyyu Airlangga</title>
     <link rel="icon" href="/rafi-abiyyu-airlangga.jpeg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

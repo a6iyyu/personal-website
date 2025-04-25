@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Main from "@/layouts/main.astro";
+
+export const getStaticPaths = (async () => {
+  const posts = await getCollection("projects");  
+  return posts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}) satisfies GetStaticPaths;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Main title={entry.data.title} description={entry.data.description}>
+  <a href="/projects" class="mt-4 w-fit flex items-center gap-4 text-slate-900 transition-all duration-300 ease-in-out lg:hover:text-slate-600">
+    <i class="fa-solid fa-arrow-left" /> Back
+  </a>
+  <br />
+  <section class="prose cursor-default text-justify">
+    <Content />
+  </section>
+</Main>

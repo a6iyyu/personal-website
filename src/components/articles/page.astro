@@ -19,6 +19,13 @@ const posts = await getCollection("articles").then(posts => posts.sort((a, b) =>
           <i class="fa-solid fa-clock" /> {post.data.reading_time} mins
         </h5>
       </div>
+      <div class="my-4 flex flex-wrap gap-2">
+        {post.data.tags.map((tag) => (
+          <h4 class="w-fit cursor-pointer rounded-full bg-slate-600 px-5 py-2 text-xs font-semibold text-white uppercase transition-all duration-300 ease-in-out lg:hover:bg-slate-800">
+            {tag}
+          </h4>
+        ))}
+      </div>
       <h4 class="my-2 cursor-default">{post.data.description}</h4>
       <a href={`/articles/${post.slug}`} class="flex items-center gap-1 text-blue-500 transition-all duration-300 ease-in-out visited:text-purple-600 lg:hover:text-blue-700">
         Read more <sup class="fa fa-external-link" />

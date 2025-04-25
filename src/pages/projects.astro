@@ -1,6 +1,60 @@
 ---
+import { getCollection } from "astro:content";
 import Main from "@/layouts/main.astro";
+import Card from "@/components/projects/card.astro";
+
+const projects = await getCollection("projects").then((project) => project.filter((project) => project.data.title));
 ---
 
-<Main title="Projects" description="">
+<!-- prettier-ignore -->
+<Main title="Projects" description="A home for ideas that turned into something real. Experiments, builds, and digital sketches that made it past the drawing board.">
+  <h2 class="mt-20 cursor-default text-4xl font-bold">Projects</h2>
+  <h4 class="mt-4 cursor-default italic">
+    Where my overthinking turned into overengineering.
+  </h4>
+  <div class="relative mt-7">
+    <label for="search" class="sr-only">Search projects</label>
+    <input
+      type="search"
+      name="search"
+      id="search"
+      class="w-full rounded-full border border-slate-900 px-6 py-3 pr-12"
+      placeholder="Search..."
+    />
+    <i class="fa-solid fa-search absolute top-1/2 right-5 -translate-y-1/2 text-sm text-slate-500" />
+  </div>
+  <section class="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+    {projects.map((project) => (
+      <Card
+        image={project.data.thumbnail}
+        title={project.data.title}
+        description={project.data.description}
+        technologies={project.data.language}
+      />
+    ))}
+  </section>
+  <section id="no-result" class="mt-10 hidden flex-col text-center text-slate-500 italic">
+    <i class="fa-solid fa-magnifying-glass-minus mb-4 text-4xl"></i>
+    No projects found.
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const empty = document.getElementById("no-result") as HTMLElement;
+      const input = document.getElementById("search") as HTMLInputElement;
+      const projects = document.querySelectorAll(".project") as NodeListOf<HTMLElement>;
+
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase().trim();
+        let visible = 0;
+
+        projects.forEach((project) => {
+          const match = (project.getAttribute("data-title") as string).includes(query);
+          project.style.display = match ? "block" : "none";
+          if (match) visible++;
+        });
+
+        empty.style.display = visible === 0 ? "flex" : "none";
+      });
+    });
+  </script>
 </Main>
